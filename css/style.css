@@ -21,7 +21,8 @@ a{
   width:1px;
   height:1px;
   overflow:hidden;
-  clip:rext(0,0,0,0);
+  clip:rect(0,0,0,0);
+  background: red;
   margin: -1px;    /*   clip 안되는 브라우저 있어 사용함 */
 
 }
