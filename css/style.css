@@ -1,31 +1,89 @@
 @charset "utf-8";
 /* 스타일 초기화 */
 *, *::before, *::after{
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+html{
+  font-size: 10px;
+}
+ul{
+  list-style-type: none ;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+/* 숨긴컨텐츠 */
+.readable-hidden{
+  position: absolute;  /* 보이지는 않지만 스크린리더는 읽음  margin까지 안보이게 처리 */
+  width:1px;
+  height:1px;
+  overflow:hidden;
+  clip:rext(0,0,0,0);
+  margin: -1px;    /*   clip 안되는 브라우저 있어 사용함 */
 
 }
-
+/*   기본스타일 */
+body{
+  color:#181818;
+  font-size: 1.4rem;
+  }
+/* 컨테이너 */
+.container{
+  background: linear-gradient(to bottom, #ccc, #eee 45%, #fff 70%, #fff 100%)
+}
 .header, .visual, .main, .slogan, .footer{
-  width: 940px; background: #ff0;
+  width: 940px; 
   margin:0 auto;
 
 }
 /* 헤더 */
 .header{
   position: relative;
-  background: pink;
+  background: #fff;
+  padding: 0 30px 45px;
+  border-radius:0 0 15px 15px; 
 }
 /* 로고 */
 .logo{
-  background: blue;
   position: absolute;
   top: 45px;
   left:65px;
-
+}
+/* 안내링크 */
+.member{
+  text-align: right;    /*메뉴 오른쪽을 정렬   float 와 같은 효과 */
+  font-size: 0;  /* 메뉴간격 0*/
+  padding: 0 2px 0;
+  margin-right: -10px;
+}
+.member li, .member a{
+  display: inline-block;
+}
+.member li{
+  display: inline-block;/* 박스가로배치 메뉴가 옆으로 위치 float left와 같은 효과*/
+  font-size: 1.4rem;
+  text-transform: uppercase; /* 소문자를 대문자로 변경*/
+}
+.bar::before{
+  content: ":";
+  margin: 0 1px;
+}
+.member a{
+  
+  padding: 5px 10px;
+  display: inline-block;
 }
 .bg-footer{
  background: red
+}
+/* 메인 메뉴 */
+.menu{
+  background: linear-gradient(to bottom, #e8852e 0%,#ed552f 35%,#ed552f 70%,#e8852e 100%);/* linear 앞에 red 적으면 linear 지원안할때 빵강배경보임배경색 글라데이션*/
+  padding: 0 30px ;
+  margin-top: 10px;
 }
 /*  비주얼 */
 .visual{
