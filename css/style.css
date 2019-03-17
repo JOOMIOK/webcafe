@@ -234,6 +234,7 @@ body{
  background: #e8852e /* 좌측 칼라는 우측 글라데이션을 지워하지 않는 경우 보이는 칼라 */radial-gradient(circle at top right, #e8852e, #ed552f);
  border-radius: 5px;
  padding: 10px; 
+ box-shadow: 0 0 10px 1px  #aaa;
 }
 .login-heading{
   font-size: 1.5rem; 
@@ -292,5 +293,22 @@ body{
 .sign .icon-right-open::before{
   color: #ed552f;
   margin: 0;
+}
+/*유효성 검사 베너*/
+.validation{
+  margin-top: 25px;
+}
+.validation-list a{
+  display: block;
+  background:url("images/validation_icon.png") no-repeat 20px 50%, linear-gradient(180deg, #bbb, #eee) ;
+  background-color: #bbb;    /* 위에 글라데이션 지원하지 않는 경우 배경색 보이게 */
+  border-radius: 30px;
+  border: 1px solid #aaa;
+  padding: 8px 15px 8px 45px; 
+  margin: 10px 0;
+}
+.validation-list a::hover, 
+.validation-list a::focus{
+  color:red;
 }
 
