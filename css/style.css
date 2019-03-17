@@ -18,7 +18,7 @@ a{
   color: inherit;
 }
 /* 숨긴컨텐츠 */
-.readable-hidden{
+.readable-hidden, legend{
   position: absolute;  /* 보이지는 않지만 스크린리더는 읽음  margin까지 안보이게 처리 */
   width:1px;
   height:1px;
@@ -208,24 +208,89 @@ body{
     }
   /* 메인 콘텐츠   */
 .main{
-  background: lime;
+  background: #fff;
+  padding: 30px;
   height:450px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   flex-direction: row;
+  border-radius:15px 15px 0 0; 
 }
 .group1{
-  background: pink;
+  
   width: 250px;
 }
 .group2{
-  background: pink;
+
   width: 380px;
   
 }
 .group3{
-  background: pink;
+  
   width: 100px;
 }
+/*      로그인     */
+.login{
+ background: #e8852e /* 좌측 칼라는 우측 글라데이션을 지워하지 않는 경우 보이는 칼라 */radial-gradient(circle at top right, #e8852e, #ed552f);
+ border-radius: 5px;
+ padding: 10px; 
+}
+.login-heading{
+  font-size: 1.5rem; 
+  font-weight: 700;
+  color: rgb(255,255,0); 
+  padding-left:  10px;
+}
 
+.login-form{
+  background: rgb(255,255,255);
+  margin-top: 10px; 
+  padding:10px 10px 0 10px;
+  border-radius: 5px 5px 0 0; 
+}
+.login-form fieldset{
+  border: 0; 
+  position: relative;
+  border-bottom: 1px solid #aaa;
+  padding-bottom:  10px; 
+}
+.user-pw{
+  margin-top:5px;
+}
+.login-form label{
+  display: inline-block;
+  width: 4em;
+}
+.login-form input{
+  width: 95px;
+  height: 24px;
+  border: 1px solid #aaa;
+  padding: 1px 1px 1px 5px;
+}
+.btn-login{
+ position: absolute;
+ top:0;
+ right: 0;
+ background: #ed552f;
+ color:rgb(255,255,255);
+ border-radius: 3px;
+ border: 0;
+ padding:0;
+ font-size: 1.2rem;
+ cursor:pointer; 
+ width: 50px;
+ height: 54px;
+}
+.sign{
+  background: rgb(255,255,255);
+  border-radius: 0 0 5px 5px;
+  display: flex;                                   /*가로정렬*/
+  justify-content: space-between;                  /*가로정렬*/
+  padding: 10px ;
+  font-size: 1.3rem;
+}
+.sign .icon-right-open::before{
+  color: #ed552f;
+  margin: 0;
+}
 
