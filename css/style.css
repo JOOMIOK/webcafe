@@ -411,7 +411,7 @@ body{
   left: 0;
 }
 .pds-heading{
-  left:83px;
+  left:87px;
 }
 .board ul, .board a[class$="more"]{
  display:none;
@@ -440,4 +440,67 @@ body{
   top:-8px;
   right:-8px;
   padding: 8px;
+}
+/*새소식*/
+.news{
+  position: relative;
+  margin-top :20px;
+}
+.news::before{
+  content: "";
+  position: absolute;
+  top:35px;
+  left:0;
+  width:80%;
+  height:1px;
+  background:#aaa linear-gradient(to right, #aaa, #fff);
+}
+.notice-heading{
+  font-size:1.5rem;
+  color: #666;
+}
+
+.news{
+  position: relative;
+}
+.news-heading{
+  font-size: 1.5rem;
+  color:#e2572d;
+}
+.news-link{
+  display: block;
+  margin-top: 35px; 
+}
+.news-item{
+ 
+  padding-left: 130px;
+  position: relative;
+}
+.news-item h3{
+  font-size: 1.4rem;
+}
+.news-item time{
+  display: block;
+  position: relative;
+  margin-top: 5px;
+}
+.news-item p{
+  margin-top: 10px;
+  line-height: 1.5;
+}
+.news-item-thumbnail{
+  position:absolute;
+  top:  3px ;
+  left:  0 ;
+  text-align: center;
+}
+.news-item-thumbnail img{
+ box-shadow: 0 15px 15px 0 #000;
+ margin-bottom: 15px; 
+}
+.news-more{
+  position: absolute;
+  top:-8px;      /*   마우스 올렸을때 영역을 넓게 하기 위해  voel\\*/
+  left:-8px;
+  padding:8px;
 }
