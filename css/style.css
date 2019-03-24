@@ -24,9 +24,7 @@ a{
   height:1px;
   overflow:hidden;
   clip:rect(0,0,0,0);
-  background: red;
   margin: -1px;    /*   clip 안되는 브라우저 있어 사용함 */
-
 }
 /*클래스모듈*/
 /* float 이슈를 해결하기 이한 clear 기능  모든 float 해제*/
@@ -46,12 +44,11 @@ body{
   font-family: 'Spoqa Han Sans', 'Spoqa Han Sans JP', 'Sans-serif'; 
   font-weight:400;
   line-height:1.15;
-  background: linear-gradient(to bottom, #ccc, #eee 45%, #fff 70%, #fff 100%);
-
+  background: linear-gradient(to bottom, #ccc, #eee 45%, #fff 70%, #fff 100%) no-repeat;
   }
 /* 컨테이너 */
 .container{
-  background: url("images/bg_flower.png") no-repeat 50% 0
+  background: url("images/bg_flower.png") no-repeat 50% 0;
 }
 .header, .visual, .main, .slogan, .footer{
   width: 940px; 
@@ -94,7 +91,7 @@ body{
   display: inline-block;
 }
 .bg-footer{
- background: red
+  background: linear-gradient(to bottom, #ccc, #eee 45%, #fff 70%, #fff 100%);
 }
 /* 메인 메뉴 */
 .menu{
@@ -129,7 +126,6 @@ body{
   content: "";
   display: block;
   border-top:2px solid #000; 
-
 }
 .sub-menu{
  position: absolute;
@@ -148,14 +144,12 @@ body{
 }
 .sub-menu li, .sub-menu a{
   display: inline-block;
-
 }
 .sub-menu a{
   padding: 10px 0;
   margin-right:10px;
 }
 /*  비주얼 */
-
   @keyframes textAni{
     0%{
       font-size: 12px;
@@ -222,17 +216,14 @@ body{
   border-radius:15px 15px 0 0; 
 }
 .group1{
-  
-  width: 250px;
+   width: 250px;
 }
 .group2{
-
   width: 380px;
-  
+ 
 }
 .group3{
-  
-  width: 190px;
+    width: 190px;
 }
 /*      로그인     */
 .login{
@@ -247,7 +238,6 @@ body{
   color: rgb(255,255,0); 
   padding-left:  10px;
 }
-
 .login-form{
   background: rgb(255,255,255);
   margin-top: 10px; 
@@ -382,7 +372,6 @@ body{
   padding: 0 10px;
   height:24px;
   border-radius: 3px; 
-
 }
 /* 공지사항 및 자료실 */
 .board{
@@ -459,7 +448,6 @@ body{
   font-size:1.5rem;
   color: #666;
 }
-
 .news{
   position: relative;
 }
@@ -511,7 +499,6 @@ body{
   padding: 10px;
   background: #ccc linear-gradient(#ccc, #eee);
 }
-
 .event-heading, .related-heading, .favorite-heading{
   font-size: 1.5rem;
 }
@@ -529,7 +516,6 @@ body{
 .event-thumbnail img{
   border: 1px solid #aaa;
   box-shadow: 5px 5px 0 0 #999;
-
 }
 .event-brief em{
   font-style: normal;
@@ -541,7 +527,6 @@ body{
   top:0;
   right:0;
 }
-
 .btn-event-prev, .btn-event-next{
   width: 19px;
   height: 100%;  /*부모에 높이를 18주었으므로 자식에 100%*/
@@ -557,7 +542,6 @@ body{
 .related{
   margin-top: 10px;
 }
-
 .related-list{
   background: #fff;
   margin-top: 10px;
@@ -571,9 +555,7 @@ body{
 .related-act{
   height:137px;
   padding: 5px 0;
-
 }
-
  /* .related-list:hover, .related-list:focus{
   height: 137px;
   padding: 5px 0;
@@ -582,7 +564,6 @@ body{
  height: 25px; */
  /* line-height: 25px;    */ /*멀티켐퍼스 글자 위아래 가운데 보이게*/
 /* }  */
-
 .related-list li{
   height: 25px;
   line-height: 25px;
@@ -605,8 +586,7 @@ body{
   background: #ccc linear-gradient(#ccc, #eee); 
 }
 .favorite-list{
- 
-  margin-top: 5px;
+   margin-top: 5px;
   overflow: hidden;
   counter-reset: 0;
 }
@@ -615,7 +595,6 @@ body{
   counter-increment: number;
   display: flex;
   align-items: center;
-
 }
 .favorite-list li::before{
   content: counter(number);/*숫자 보이고 꾸미기위한 숫자 보이게 */
@@ -635,7 +614,6 @@ body{
  overflow: hidden;
  background-image: url("images/rank.png");
  background-repeat: no-repeat;  
-
 }
 .stop{
   background-position:0 50%; 
@@ -648,4 +626,69 @@ body{
   top: 2px;
   right: 2px;
   padding: 8px; 
+}
+/*  슬로건 */
+.slogan{
+   position: relative;
+  padding: 10px 100px 10px 170px;
+  color:#a09784;
+}
+.slogan-heading{
+  width: 110px;
+  height: 83px;
+  font-size:1.4rem;
+  font-weight: 400;
+  text-align: center;
+  padding-top: 10px;
+  position: absolute;
+  left: 35px;
+  bottom: -35px;
+}
+.slogan-heading::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("images/coffee.png") no-repeat;
+}
+.slogan-content q::before{
+ font-size:  3rem;
+ position: relative;/* 기준을 나로 */
+ top:10px;
+}
+.slogan-content q::after{
+  content:""; 
+}
+/*  푸터 */
+.footer{
+  padding: 10px 100px 10px 170px;
+  position: relative;
+}
+.footer-logo{
+  position: absolute;
+  top:55px;
+  left:35px;
+}
+.guide{
+  background: #7b8385;
+  display: flex;
+  color:#fff;
+  padding: 5px 15px;
+  justify-content: space-around;
+  border-radius: 5px; 
+}
+.address, .copyright{
+  font-style: normal;
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+.address span{
+  margin-right: 15px;
+}
+.badge{
+  position: absolute;
+  top:10px;
+  right: 0;
 }
