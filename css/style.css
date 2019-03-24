@@ -232,7 +232,7 @@ body{
 }
 .group3{
   
-  width: 100px;
+  width: 190px;
 }
 /*      로그인     */
 .login{
@@ -504,3 +504,94 @@ body{
   left:-8px;
   padding:8px;
 }
+/* 신규이벤트 및 관련 사이트 */
+.event-related{
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  padding: 10px;
+  background: #ccc linear-gradient(#ccc, #eee);
+}
+
+.event-heading, .related-heading{
+  font-size: 1.5rem;
+}
+.event-heading span, .related-heading span{
+ color:#ed552f;
+}
+.event{
+  border-bottom:1px solid #aaa; 
+  position: relative;
+}
+.event p{
+  margin:  10px 0;
+  line-height: 1.5;
+}
+.event-thumbnail img{
+  border: 1px solid #aaa;
+  box-shadow: 5px 5px 0 0 #999;
+
+}
+.event-brief em{
+  font-style: normal;
+}
+.btn-event{
+  height: 18px;        /*버튼은 브라우저\별로 달라보여 버튼은 부모에 사이즈를 준다 */
+  overflow: hidden;    /*버튼에 텍스트 안보이게  */
+  position: absolute;
+  top:0;
+  right:0;
+}
+
+.btn-event-prev, .btn-event-next{
+  width: 19px;
+  height: 100%;  /*부모에 높이를 18주었으므로 자식에 100%*/
+  border:0;
+  padding: 18px 0 0 0;
+  background-image: url("images/back_forward.png");  /*글자 안보이게 */
+  background-repeat: no-repeat;
+  cursor:pointer;
+}
+.btn-event-next{
+  background-position: -36px 0;
+}
+.related{
+  margin-top: 10px;
+}
+
+.related-list{
+  background: #fff;
+  margin-top: 10px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  height: 27px;
+  overflow: hidden; 
+  /*transition: all 0.2s;/*부드럽게 늘어나게*/
+  transition: all 0.4s;
+}
+.related-act{
+  height:137px;
+  padding: 5px 0;
+
+}
+
+ /* .related-list:hover, .related-list:focus{
+  height: 137px;
+  padding: 5px 0;
+} */
+/* .related-list li{
+ height: 25px; */
+ /* line-height: 25px;    */ /*멀티켐퍼스 글자 위아래 가운데 보이게*/
+/* }  */
+
+.related-list li{
+  height: 25px;
+  line-height: 25px;
+}
+.related-list a{
+  display: block;
+  padding-left: 25px;
+}
+.related-list a:focus{
+  outline: 1px solid rgba(0,0,210,1);
+  outline-offset: -2px;
+} 
